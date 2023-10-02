@@ -10,7 +10,7 @@ read ip_2
 echo $ip_2
 
 echo "net.ipv4.ip_forward=1" >> /etc/sysctl.conf
-syscl -p
+sysctl -p
 
 iptables -t nat -I PREROUTING -p tcp -d $ip_1 --dport 8388 -j DNAT --to-destination $ip_2
 iptables -t nat -I POSTROUTING -p tcp -d $ip_2 -j MASQUERADE
