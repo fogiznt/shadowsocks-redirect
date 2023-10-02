@@ -34,7 +34,7 @@ systemctl enable shadowsocks-libev.service
 EOF
 
 echo "Введите пароль от второго сервера"
-scp root@$ip_2:/root ~/server2.sh 
+scp /root/server2.sh root@$ip_2:/root/
 echo "Снова введите пароль от второго сервера"
 ssh root@$ip_2 "chmod +x /root/server2.sh && /root/server2.sh"
 
