@@ -36,6 +36,6 @@ EOF
 echo "Введите пароль от второго сервера"
 scp root@$ip_2:/root ~/server2.sh 
 echo "Снова введите пароль от второго сервера"
-ыыр root@$ip_2 "chmod +x /root/server2.sh && /root/server2.sh"
+ssh root@$ip_2 "chmod +x /root/server2.sh && /root/server2.sh"
 
 echo "доступ к shadowsocks:\nip - $ip_1\nport - 8388\ncipher - chacha20-ietf-poly1305\npassword - $password"
