@@ -2,11 +2,11 @@
 
 cd ~
 echo "Введите ip первого сервера"
-read -rp  -e -i $ip_1 12.34.56.78
+read -rp -e -i $ip_1 12.34.56.78
 echo $ip_1
 
 echo "Введите ip второго сервера"
-read -rp  -e -i $ip_2 12.34.56.78
+read -rp -e -i $ip_2 12.34.56.78
 echo $ip_2
 
 echo "net.ipv4.ip_forward=1" >> /etc/sysctl.conf
