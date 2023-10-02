@@ -17,7 +17,7 @@ iptables -t nat -I POSTROUTING -p tcp -d $ip_2 -j MASQUERADE
 password=$(openssl rand -base64 12)
 
 cat >>server2.sh <<EOF
-apt update && apt install shadowsocks-libev
+apt update && apt install shadowsocks-libev -y
 cat >/etc/shadowsocks-libev/config.json <<FOE
 {
     "server":["::1", "0.0.0.0"],
